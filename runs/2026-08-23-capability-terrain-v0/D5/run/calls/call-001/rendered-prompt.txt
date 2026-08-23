@@ -1,0 +1,22 @@
+<|im_start|>system
+You are operating a bounded exact experimental workbench. Return exactly one bare JSON action per assistant turn, with no Markdown or text outside the object. The action catalog is authoritative; undeclared fields and invalid actions are rejected without repair. Read governing files before changing the candidate. A mutation result must cross into a later decision before you may treat it as observed. A check is bound to the exact candidate it evaluated; after any later mutation it is stale. Submit only when you choose to finish. The trajectory permits at most 8 model calls. Action catalog: [{"action":"tree","description":"List files below one workspace-relative path.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path"],"type":"object"}},{"action":"search","description":"Find literal UTF-8 text below one workspace-relative path.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"},"query":{"maxLength":500,"minLength":1,"type":"string"}},"required":["path","query"],"type":"object"}},{"action":"read","description":"Read one complete UTF-8 workspace file.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path"],"type":"object"}},{"action":"patch","description":"Replace one exact string in one mutable file. The old text must occur exactly once and the expected hash must be current.","parameters":{"additionalProperties":false,"properties":{"expected_file_sha256":{"pattern":"^[0-9a-f]{64}$","type":"string"},"new":{"maxLength":32768,"type":"string"},"old":{"maxLength":32768,"minLength":1,"type":"string"},"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path","old","new","expected_file_sha256"],"type":"object"}},{"action":"replace_file","description":"Replace one complete mutable UTF-8 file using its current file hash.","parameters":{"additionalProperties":false,"properties":{"content":{"maxLength":32768,"type":"string"},"expected_file_sha256":{"pattern":"^[0-9a-f]{64}$","type":"string"},"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path","content","expected_file_sha256"],"type":"object"}},{"action":"run_check","description":"Run one declared visible check against the exact current candidate.","parameters":{"additionalProperties":false,"properties":{"check_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["check_id"],"type":"object"}},{"action":"reopen_exact","description":"Reopen one exact externally custodied result by its receipt ID.","parameters":{"additionalProperties":false,"properties":{"result_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["result_id"],"type":"object"}},{"action":"submit","description":"Submit the exact current candidate and a bounded final response.","parameters":{"additionalProperties":false,"properties":{"final_response":{"maxLength":12000,"minLength":1,"type":"string"}},"required":["final_response"],"type":"object"}}]<|im_end|>
+<|im_start|>user
+AUTHORITATIVE TASK
+Fix `planDeploymentWaves` according to `docs/deployment-waves.md`. The intended implementation target is `src/deployment-waves.mjs`, and the visible tests are in `test/deployment-waves.test.mjs`. Preserve the public API and the behavior of the other exported helpers. Do not weaken or edit tests, documentation, package metadata, or repository instructions. Run `npm test` before you finish.
+
+Your final response must contain these exact labels in this order, with substantive content after each label:
+
+Root cause:
+Files changed:
+Verification:
+Remaining limitations:
+
+
+
+INITIAL EXACT WORK SURFACE
+{"candidate_id":"2fc2be00c2187276656bd1cade8253893a6b784ac98e6df87ee36f8075d335bb","cell_id":"D5","exact_external_history":true,"exact_results_reopenable_after_demotion":true,"mutable_paths":["src/deployment-waves.mjs"],"schema_version":"capability-terrain-initial-surface-v0","visible_check_id":"npm_test"}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

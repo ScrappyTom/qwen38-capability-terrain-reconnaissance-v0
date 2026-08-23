@@ -1,0 +1,6 @@
+{"action":"read","path":"test/fold-device-events.test.mjs"}
+}
+</invoke>
+</think>
+
+{"action":"read","path":"test/fold-device-events.test.mjs"}

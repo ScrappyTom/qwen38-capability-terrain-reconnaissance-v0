@@ -1,0 +1,60 @@
+<|im_start|>system
+You are operating a bounded exact experimental workbench. Return exactly one bare JSON action per assistant turn, with no Markdown or text outside the object. The action catalog is authoritative; undeclared fields and invalid actions are rejected without repair. Read governing files before changing the candidate. A mutation result must cross into a later decision before you may treat it as observed. A check is bound to the exact candidate it evaluated; after any later mutation it is stale. Submit only when you choose to finish. The trajectory permits at most 8 model calls. Action catalog: [{"action":"tree","description":"List files below one workspace-relative path.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path"],"type":"object"}},{"action":"search","description":"Find literal UTF-8 text below one workspace-relative path.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"},"query":{"maxLength":500,"minLength":1,"type":"string"}},"required":["path","query"],"type":"object"}},{"action":"read","description":"Read one complete UTF-8 workspace file.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path"],"type":"object"}},{"action":"patch","description":"Replace one exact string in one mutable file. The old text must occur exactly once and the expected hash must be current.","parameters":{"additionalProperties":false,"properties":{"expected_file_sha256":{"pattern":"^[0-9a-f]{64}$","type":"string"},"new":{"maxLength":32768,"type":"string"},"old":{"maxLength":32768,"minLength":1,"type":"string"},"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path","old","new","expected_file_sha256"],"type":"object"}},{"action":"replace_file","description":"Replace one complete mutable UTF-8 file using its current file hash.","parameters":{"additionalProperties":false,"properties":{"content":{"maxLength":32768,"type":"string"},"expected_file_sha256":{"pattern":"^[0-9a-f]{64}$","type":"string"},"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path","content","expected_file_sha256"],"type":"object"}},{"action":"run_check","description":"Run one declared visible check against the exact current candidate.","parameters":{"additionalProperties":false,"properties":{"check_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["check_id"],"type":"object"}},{"action":"reopen_exact","description":"Reopen one exact externally custodied result by its receipt ID.","parameters":{"additionalProperties":false,"properties":{"result_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["result_id"],"type":"object"}},{"action":"submit","description":"Submit the exact current candidate and a bounded final response.","parameters":{"additionalProperties":false,"properties":{"final_response":{"maxLength":12000,"minLength":1,"type":"string"}},"required":["final_response"],"type":"object"}}]<|im_end|>
+<|im_start|>user
+AUTHORITATIVE TASK
+# Revise an existing paper from locked evidence
+
+Revise `paper.md` using the two locked source records
+`evidence_update.md` and `editorial_memo.md`.
+
+The revision must:
+
+- update the Abstract, Results, and Discussion to agree with the current
+  design record, primary analysis, sensor-completeness audit, and editorial
+  memo;
+- use association language appropriate to the study design rather than making
+  a causal claim;
+- report the current primary group rates, adjusted difference, and confidence
+  interval in both the Abstract and Results, and report the current p value in
+  Results;
+- report the group-specific sensor-dropout rates and explain the stated
+  direction of possible bias from the complete-case analysis without
+  imputation;
+- characterize the ward-level subgroup analysis according to the locked
+  records without presenting it as confirmatory;
+- bind design statements to `[D1]`, primary-result statements to `[D2]`, and
+  missingness or subgroup statements to `[D3]`; and
+- add no source, statistic, or recommendation not supported by the locked
+  records.
+
+Preserve the title and the complete Introduction, Methods, and References
+sections of `paper.md` verbatim. Keep the existing section headings in their
+existing order. Do not change `evidence_update.md` or `editorial_memo.md`.
+Only `paper.md` should change.
+
+The declared `visible` check covers candidate file identity, locked-source and
+protected-section preservation, section structure, obsolete literal markers,
+and citation syntax. External grading evaluates the revised evidence claims
+and cross-section consistency. Submit when you choose to finish.
+
+
+INITIAL EXACT WORK SURFACE
+{"candidate_id":"37d9c7dbf295039a3763cd675ebedc59a6c95874b33b870e9657e104c5583adc","cell_id":"D2","exact_external_history":true,"exact_results_reopenable_after_demotion":true,"mutable_paths":["paper.md"],"schema_version":"capability-terrain-initial-surface-v0","visible_check_id":"visible"}<|im_end|>
+<|im_start|>assistant
+{
+    "action": "tree",
+    "path": "."
+}<|im_end|>
+<|im_start|>user
+EXACT ACTION RESULT
+{"accepted":true,"candidate_id":"37d9c7dbf295039a3763cd675ebedc59a6c95874b33b870e9657e104c5583adc","entries":[{"bytes":867,"path":"editorial_memo.md","sha256":"11eb5a7991372eaff8f72e3dc6a06606413350a992f639923d46b8031665885e","type":"file"},{"bytes":1031,"path":"evidence_update.md","sha256":"b329c4288fb9da0d51d52ba0480ea23494673d85147bdea7ad03f947d7b0f6d5","type":"file"},{"bytes":2258,"path":"paper.md","sha256":"8e72b40dcdd3597319eb62f1ae030666cebffc7d5798acd82f80b79d381a6439","type":"file"}],"path":".","result_id":"RESULT-001","schema_version":"exact-action-result-v0","tool":"tree"}<|im_end|>
+<|im_start|>assistant
+{"action":"read","path":"paper.md"}<|im_end|>
+<|im_start|>user
+EXACT ACTION RESULT
+{"accepted":true,"bytes":2258,"candidate_id":"37d9c7dbf295039a3763cd675ebedc59a6c95874b33b870e9657e104c5583adc","content":"# Adaptive Alerts and Overnight Retention: A Multisite Evaluation\n\n## Abstract\n\nIn a randomized trial across six wards, adaptive alerts caused a 12.0 percentage-point increase in overnight retention. Retention was 64.8% with adaptive alerts and 52.8% under usual monitoring. These findings demonstrate that adaptive alerts improve retention and support immediate deployment across inpatient settings [D2].\n\n## Introduction\n\nLoss of overnight sensor observations can delay recognition of clinical deterioration. Adaptive alerts may improve record retention by identifying interrupted streams before the observation window closes [D1].\n\nWe evaluated whether adaptive alerts were associated with retention of usable overnight sensor records across six inpatient wards.\n\n## Methods\n\nWe conducted a prospective matched-cohort evaluation across six wards. Wards introduced adaptive alerts according to local operational schedules; patients were not randomly assigned. Each intervention observation was matched to a usual-monitoring observation by ward and baseline risk.\n\nThe primary endpoint was retention of a usable overnight sensor record through 06:00. The analysis used complete cases and did not impute missing sensor records. Ward-level subgroup comparisons were exploratory.\n\n## Results\n\nOvernight retention was 64.8% with adaptive alerts and 52.8% with usual monitoring, an adjusted absolute difference of 12.0 percentage points (95% CI, 3.2 to 20.8; p = 0.01) [D2].\n\nThe improvement was largest on medical wards. This preregistered subgroup confirms that ward type modifies the alert effect [D3].\n\nSensor dropout was negligible (<2% in both groups) and cannot explain the observed benefit [D3].\n\n## Discussion\n\nThis evaluation establishes that adaptive alerts caused higher overnight retention and supports immediate deployment across inpatient settings [D1][D2].\n\nThe preregistered ward subgroup provides confirmatory evidence that the intervention is most effective on medical wards [D3]. Sensor missingness was too rare to affect interpretation.\n\n## References\n\n[D1] Operations Consortium. Multisite rollout design record. 2026.\n\n[D2] Analysis Group. Revised overnight-retention model. 2026.\n\n[D3] Data Quality Team. Sensor-completeness audit. 2026.\n","file_sha256":"8e72b40dcdd3597319eb62f1ae030666cebffc7d5798acd82f80b79d381a6439","path":"paper.md","result_id":"RESULT-002","schema_version":"exact-action-result-v0","tool":"read"}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

@@ -1,0 +1,4 @@
+{"action":"read","path":"test/deployment-waves.test.mjs"}
+</think>
+
+{"action": "read", "path": "test/deployment-waves.test.mjs"}

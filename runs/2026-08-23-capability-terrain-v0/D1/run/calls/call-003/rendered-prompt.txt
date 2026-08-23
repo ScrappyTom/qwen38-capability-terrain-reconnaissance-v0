@@ -1,0 +1,83 @@
+<|im_start|>system
+You are operating a bounded exact experimental workbench. Return exactly one bare JSON action per assistant turn, with no Markdown or text outside the object. The action catalog is authoritative; undeclared fields and invalid actions are rejected without repair. Read governing files before changing the candidate. A mutation result must cross into a later decision before you may treat it as observed. A check is bound to the exact candidate it evaluated; after any later mutation it is stale. Submit only when you choose to finish. The trajectory permits at most 4 model calls. Action catalog: [{"action":"tree","description":"List files below one workspace-relative path.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path"],"type":"object"}},{"action":"search","description":"Find literal UTF-8 text below one workspace-relative path.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"},"query":{"maxLength":500,"minLength":1,"type":"string"}},"required":["path","query"],"type":"object"}},{"action":"read","description":"Read one complete UTF-8 workspace file.","parameters":{"additionalProperties":false,"properties":{"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path"],"type":"object"}},{"action":"patch","description":"Replace one exact string in one mutable file. The old text must occur exactly once and the expected hash must be current.","parameters":{"additionalProperties":false,"properties":{"expected_file_sha256":{"pattern":"^[0-9a-f]{64}$","type":"string"},"new":{"maxLength":32768,"type":"string"},"old":{"maxLength":32768,"minLength":1,"type":"string"},"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path","old","new","expected_file_sha256"],"type":"object"}},{"action":"replace_file","description":"Replace one complete mutable UTF-8 file using its current file hash.","parameters":{"additionalProperties":false,"properties":{"content":{"maxLength":32768,"type":"string"},"expected_file_sha256":{"pattern":"^[0-9a-f]{64}$","type":"string"},"path":{"maxLength":512,"minLength":1,"type":"string"}},"required":["path","content","expected_file_sha256"],"type":"object"}},{"action":"run_check","description":"Run one declared visible check against the exact current candidate.","parameters":{"additionalProperties":false,"properties":{"check_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["check_id"],"type":"object"}},{"action":"reopen_exact","description":"Reopen one exact externally custodied result by its receipt ID.","parameters":{"additionalProperties":false,"properties":{"result_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["result_id"],"type":"object"}},{"action":"submit","description":"Submit the exact current candidate and a bounded final response.","parameters":{"additionalProperties":false,"properties":{"final_response":{"maxLength":12000,"minLength":1,"type":"string"}},"required":["final_response"],"type":"object"}},{"action":"atlas_root","description":"Return the frozen atlas root.","parameters":{"additionalProperties":false,"properties":{},"required":[],"type":"object"}},{"action":"atlas_expand","description":"Expand one atlas hierarchy node with deterministic pagination.","parameters":{"additionalProperties":false,"properties":{"cursor":{"minimum":0,"type":"integer"},"node_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["node_id","cursor"],"type":"object"}},{"action":"atlas_search","description":"Search frozen atlas metadata, headings, and literal source lines.","parameters":{"additionalProperties":false,"properties":{"cursor":{"minimum":0,"type":"integer"},"query":{"maxLength":200,"minLength":1,"type":"string"}},"required":["query","cursor"],"type":"object"}},{"action":"atlas_read","description":"Read one exact atlas document or bounded section.","parameters":{"additionalProperties":false,"properties":{"node_id":{"maxLength":100,"minLength":1,"type":"string"}},"required":["node_id"],"type":"object"}}]<|im_end|>
+<|im_start|>user
+AUTHORITATIVE TASK
+# Task: write the Q3 XL large-world runtime evidence memo
+
+Create a decision-support memo at `Q3XL_LARGE_WORLD_RUNTIME_MEMO.md` for the
+next phase of this project.
+
+The exact evidence universe is the frozen external atlas disclosed in the
+current work surface. It contains completed experiment result reports, direct
+transcript audits, and semantic reviews from this repository at one exact Git
+commit. The corpus is intentionally too large to place in active context.
+
+Use the mechanical hierarchy, literal search, and exact reads to determine:
+
+1. which Q3 XL capabilities are supported under the tested conditions;
+2. which failures or variable behaviors recur across information selection,
+   semantic/detail preservation, construction, effect/check uptake, and
+   closure;
+3. which runtime substrate properties have direct evidence behind them;
+4. which proposed mechanisms remain optional, negative, inconclusive, or
+   parked;
+5. what important package, fixture, measurement, and causal limits constrain
+   the conclusions; and
+6. the smallest worthwhile next authentic large-world test.
+
+Required artifact structure:
+
+- `# Q3 XL large-world runtime evidence memo`
+- `## Executive decision`
+- `## Supported capabilities`
+- `## Observed boundaries and recurring errors`
+- `## Runtime implications`
+- `## Optional or parked mechanisms`
+- `## Limits and counterexamples`
+- `## Recommended next authentic test`
+- `## Evidence index`
+
+Requirements:
+
+- Distinguish model/package observations from general model claims.
+- Distinguish information availability, selection, sufficiency judgment,
+  acquisition stopping, construction, effect, verification, and closure.
+- Preserve important negative and mixed results rather than telling a simple
+  progress story.
+- Do not call a mechanism supported merely because it reduced reads, tokens,
+  or overflow.
+- Treat model-authored plans, summaries, action bases, and hypotheses as
+  attributed artifacts rather than authoritative world state.
+- Use repository-relative Markdown links to exact evidence documents.
+- Include at least 12 evidence links spanning at least 8 experiment
+  directories.
+- State quantitative results only when the exact source supports them.
+- Do not claim that the atlas, current-object projection, memory, a controller,
+  a commit gate, semantic digests, or any other runtime component is promoted.
+- Keep the memo between 1,400 and 2,400 words, excluding the Evidence index.
+
+The visible check validates artifact identity, required structure, link shape,
+and word-count bounds. It does not decide whether the memo is semantically
+accurate or whether its evidence is sufficient.
+
+Work until the memo is accurate and useful, check it, and submit it. Do not
+modify another file.
+
+
+INITIAL EXACT WORK SURFACE
+{"atlas_orientation":{"atlas_sha256":"ff262d7ab56e9213ea57917a2d44b2d544b1f03a37bfe550f4dd310347861ea9","document_count":103,"node_id":"ROOT","root_id":"ROOT","section_count":971,"source_commit":"355df1826dc2f7cafd9db6122261cab4565ee356","study_count":77,"total_exact_bytes":766502},"candidate_id":"db26870536cde28d4a602ed713ea10259eddcda4c28b17d9a25c44aa4ce1608e","cell_id":"D1","exact_external_history":true,"exact_results_reopenable_after_demotion":true,"mutable_paths":["Q3XL_LARGE_WORLD_RUNTIME_MEMO.md"],"schema_version":"capability-terrain-initial-surface-v0","visible_check_id":"memo_visible"}<|im_end|>
+<|im_start|>assistant
+[{"action":"atlas_root"}]<|im_end|>
+<|im_start|>user
+EXACT ACTION RESULT
+{"accepted":false,"candidate_id":"db26870536cde28d4a602ed713ea10259eddcda4c28b17d9a25c44aa4ce1608e","error":{"code":"response_not_object","message":"response must be one JSON object"},"result_id":"RESULT-001","schema_version":"exact-action-result-v0","tool":"response"}<|im_end|>
+<|im_start|>assistant
+{"action":"atlas_root"}<|im_end|>
+<|im_start|>user
+EXACT ACTION RESULT
+{"accepted":true,"atlas_sha256":"ff262d7ab56e9213ea57917a2d44b2d544b1f03a37bfe550f4dd310347861ea9","candidate_id":"db26870536cde28d4a602ed713ea10259eddcda4c28b17d9a25c44aa4ce1608e","result_id":"RESULT-002","root":{"document_count":103,"node_id":"ROOT","section_count":971,"study_count":77,"total_exact_bytes":766502},"schema_version":"exact-action-result-v0","source_commit":"355df1826dc2f7cafd9db6122261cab4565ee356","tool":"atlas_root"}<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+

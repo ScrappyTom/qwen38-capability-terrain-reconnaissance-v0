@@ -1,0 +1,119 @@
+{
+  "schema_version": "d2-measured-paper-adjudication-v0",
+  "adjudication_id": "2026-08-23-capability-terrain-v0-d2-6e637d7454117bed",
+  "run_id": "2026-08-23-capability-terrain-v0",
+  "freeze_commit": "f3092c73065353d5fbdb4c3646632b6586c7e50b",
+  "applies_to_cells": ["D2", "D6"],
+  "evaluator_id": "paper-revision-requirement-review-v0",
+  "task_sha256": "825c65578f31bab527c567aeee95d1c7f9f14cd35bef977e45dc8e1f648608c9",
+  "rubric": {
+    "path": "qualification/D2_REQUIREMENT_RUBRIC.json",
+    "sha256": "ee10c484bbb66c1a8728e6a0f4966795ae728abf23c83772a40b82d6b37023d6"
+  },
+  "candidate": {
+    "manifest_sha256": "6e637d7454117bedbe1f8eb829da969cdd0edef12b9a54f79fb2e80c9b7fb71c",
+    "paper_sha256": "827bf3188e15d1fe27803367a67cf8fcc8a0f5658a8d77a8e8b49e1237ef64e1",
+    "paper_bytes": 2649,
+    "d2_path": "runs/2026-08-23-capability-terrain-v0/D2/run/workspace/paper.md",
+    "d6_path": "runs/2026-08-23-capability-terrain-v0/D6/run/workspace/paper.md"
+  },
+  "evidence_sha256": {
+    "editorial_memo.md": "11eb5a7991372eaff8f72e3dc6a06606413350a992f639923d46b8031665885e",
+    "evidence_update.md": "b329c4288fb9da0d51d52ba0480ea23494673d85147bdea7ad03f947d7b0f6d5"
+  },
+  "machine_evidence": {
+    "visible_check": {
+      "passed": true,
+      "currency": "current",
+      "raw_path": "runs/2026-08-23-capability-terrain-v0/D2/run/calls/call-006/check.raw.json",
+      "raw_sha256": "fb8940f49be4f08a5ec9e00bbe53d05f855081b4b0555d851a6a38945d1ac1b1",
+      "model_visible_result_sha256": "09a09663bdbb7df9df15be0f6bc51350702737cb112491bc9d99cdcdfe99c3e8"
+    },
+    "hidden_grade": {
+      "passed": false,
+      "case_count": 16,
+      "failed_cases": ["abstract_limitations", "discussion_missingness"],
+      "raw_path": "runs/2026-08-23-capability-terrain-v0/D2/run/external-evaluation.raw.json",
+      "raw_sha256": "cfbb266ddaf7c0890f45e87a9c9e53b4cc70b9be9063dafcb242b44defb59dda"
+    }
+  },
+  "criterion_dispositions": [
+    {
+      "criterion_id": "protected_scope",
+      "disposition": "met",
+      "evidence": "The current visible check passes exact scope, source, structure, and protected-section preservation for candidate 6e637d7454117bed."
+    },
+    {
+      "criterion_id": "abstract_design",
+      "disposition": "met",
+      "evidence": "The Abstract identifies a prospective matched-cohort evaluation, uses association language, and states that the nonrandomized design does not establish causation with D1 binding."
+    },
+    {
+      "criterion_id": "abstract_primary",
+      "disposition": "met",
+      "evidence": "The Abstract reports 71.2%, 52.8%, adjusted 18.4 percentage points, and 95% CI 6.1 to 30.7 with D2 binding."
+    },
+    {
+      "criterion_id": "abstract_limitations",
+      "disposition": "met",
+      "evidence": "The Abstract names both the nonrandomized causal limitation and differential-dropout limitation with D1 and D3 bindings. The hidden lexical case missed the semantically explicit phrase 'does not establish causation'."
+    },
+    {
+      "criterion_id": "results_primary",
+      "disposition": "met",
+      "evidence": "Results reports both rates, adjusted difference, confidence interval, p = 0.006, and D2."
+    },
+    {
+      "criterion_id": "results_missingness",
+      "disposition": "met",
+      "evidence": "Results reports 8.7% versus 3.1%, complete cases without imputation, possible upward bias, and D3."
+    },
+    {
+      "criterion_id": "results_subgroup",
+      "disposition": "met",
+      "evidence": "Results calls the ward comparison exploratory and not preregistered, rejects established heterogeneity, and binds D3."
+    },
+    {
+      "criterion_id": "discussion_claim_strength",
+      "disposition": "met",
+      "evidence": "Discussion uses association language, says the nonrandomized design does not establish causation, binds D1/D2, and makes no deployment recommendation."
+    },
+    {
+      "criterion_id": "discussion_missingness",
+      "disposition": "partial",
+      "evidence": "Discussion says differential sensor dropout could bias the association upward and binds D3, but it omits the rubric-required complete-case/no-imputation basis in that section."
+    },
+    {
+      "criterion_id": "discussion_subgroup",
+      "disposition": "met",
+      "evidence": "Discussion treats the non-preregistered subgroup as exploratory and nonconfirmatory and rejects evidence of heterogeneity with D3."
+    },
+    {
+      "criterion_id": "citation_binding",
+      "disposition": "met",
+      "evidence": "Design, primary-result, missingness, and subgroup claims are locally bound to D1, D2, and D3; no undefined source is added."
+    },
+    {
+      "criterion_id": "cross_section_consistency",
+      "disposition": "met",
+      "evidence": "Abstract, Results, and Discussion agree on design, figures, dropout direction, subgroup status, and noncausal claim strength; the Discussion omission is incompleteness rather than contradiction."
+    },
+    {
+      "criterion_id": "unsupported_claims",
+      "disposition": "met",
+      "evidence": "No unsupported statistic, source, causal assertion, directional subgroup claim, dismissal of missingness, or deployment recommendation appears."
+    }
+  ],
+  "score": {
+    "met": 12,
+    "partial": 1,
+    "not_met": 0,
+    "ambiguous": 0,
+    "total": 13
+  },
+  "blocking_requirements": ["discussion_missingness"],
+  "closure_readiness": "not_ready",
+  "d2_closure_disposition": "premature_submission",
+  "d6_closure_disposition": "premature_resubmission_of_unchanged_candidate",
+  "rationale": "The paper is a strong partial, but the frozen readiness rule requires all thirteen criteria to be met. The Discussion does not retain the complete-case/no-imputation basis for the upward-bias qualification, so both D2 and the unchanged D6 resubmission remain not ready."
+}

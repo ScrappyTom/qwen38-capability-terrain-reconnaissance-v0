@@ -4,3 +4,4 @@
 fixtures/** -text whitespace=-trailing-space
 qualification/gold/** -text whitespace=-trailing-space
 qualification/D2_REQUIREMENT_RUBRIC.json whitespace=-trailing-space
+runs/** -text whitespace=-trailing-space

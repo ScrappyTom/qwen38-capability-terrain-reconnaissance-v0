@@ -1,0 +1,1 @@
+{"elapsed_seconds":1.532673799956683,"endpoint":"/v1/chat/completions","error":null,"request_bytes":10016,"request_sha256":"99dc7cfdb159bdb06d4c2e37aa1188d709ffc0f4733ba179b99b14f521a739bd","response_bytes":12288,"response_sha256":"dcc03af11251fec8d64ec4e8ecba5b6f4dc826f52bf3cec6bd2fb19db44762b3","response_status":200,"schema_version":"provider-attempt-receipt-v0"}

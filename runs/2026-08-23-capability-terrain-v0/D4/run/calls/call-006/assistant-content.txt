@@ -1,0 +1,2 @@
+{"action":"read","path":"test/fold-device-events.test.mjs"}
+}

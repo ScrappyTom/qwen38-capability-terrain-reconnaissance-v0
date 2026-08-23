@@ -1,0 +1,1 @@
+{"accepted_host_permission_risk":true,"authorization_received_local_time":"2026-08-23T15:53:00-06:00","authorized":true,"authorized_freeze_commit":"f3092c73065353d5fbdb4c3646632b6586c7e50b","authorized_run_id":"2026-08-23-capability-terrain-v0","maximum_model_calls":42,"one_attempt_per_call":true,"retries":0,"scope":"qwen38-capability-terrain-reconnaissance-v0"}
