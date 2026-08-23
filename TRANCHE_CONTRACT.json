@@ -1,0 +1,162 @@
+{
+  "schema_version": "capability-terrain-tranche-v0",
+  "program_commit": "8465b9666f86ebff12d27382a8e025b111a33b24",
+  "seed": 20260823,
+  "one_attempt_per_call": true,
+  "retries": 0,
+  "context_tokens": 25088,
+  "completion_allowance_tokens": 4096,
+  "prompt_ceiling_tokens": 20992,
+  "max_total_actor_calls": 42,
+  "max_total_serialized_tokens": 1053696,
+  "run_order": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6"
+  ],
+  "cells": {
+    "D1": {
+      "name": "large-world navigation prefix",
+      "fixture": "fixtures/d1_large_world_navigation",
+      "workspace": "workspace",
+      "task": "task.md",
+      "atlas": true,
+      "mutable_paths": [
+        "Q3XL_LARGE_WORLD_RUNTIME_MEMO.md"
+      ],
+      "visible_check": "memo_visible",
+      "call_ceiling": 4,
+      "minimum_path": null,
+      "claim_limit": "four-decision discovery and selection behavior only"
+    },
+    "D2": {
+      "name": "evidence-bound paper revision",
+      "fixture": "fixtures/d2_paper_revision",
+      "workspace": "candidate",
+      "task": "task.md",
+      "atlas": false,
+      "mutable_paths": [
+        "paper.md"
+      ],
+      "visible_check": "visible",
+      "external_evaluator": "paper_hidden_and_requirement_review",
+      "call_ceiling": 8,
+      "minimum_path": [
+        "tree",
+        "read paper",
+        "read evidence update",
+        "read editorial memo",
+        "patch or replace paper",
+        "run visible check",
+        "observe check and submit"
+      ],
+      "minimum_calls": 7,
+      "malformed_action_slack": 1,
+      "requires_labeled_final_response": false
+    },
+    "D3": {
+      "name": "ordinary-success coverage calibration",
+      "fixture": "fixtures/d3_coverage_coalescing",
+      "workspace": "fixture",
+      "task": "TASK.md",
+      "atlas": false,
+      "mutable_paths": [
+        "src/coalesce-coverage.mjs"
+      ],
+      "visible_check": "npm_test",
+      "external_evaluator": "artifact_grader",
+      "call_ceiling": 8,
+      "minimum_path": [
+        "tree",
+        "read contract",
+        "read target",
+        "replace target",
+        "run visible check",
+        "observe check and submit"
+      ],
+      "minimum_calls": 6,
+      "malformed_action_slack": 1,
+      "requires_labeled_final_response": true
+    },
+    "D4": {
+      "name": "rule-dense device-event construction",
+      "fixture": "fixtures/d4_device_event_folding",
+      "workspace": "fixture",
+      "task": "TASK.md",
+      "atlas": false,
+      "mutable_paths": [
+        "src/fold-device-events.mjs"
+      ],
+      "visible_check": "npm_test",
+      "external_evaluator": "artifact_grader",
+      "call_ceiling": 9,
+      "minimum_path": [
+        "tree",
+        "read contract",
+        "read target",
+        "replace target",
+        "run visible check",
+        "observe check and optionally repair",
+        "recheck if repaired",
+        "submit"
+      ],
+      "minimum_calls": 6,
+      "repair_path_calls": 8,
+      "malformed_action_slack": 1,
+      "requires_labeled_final_response": true
+    },
+    "D5": {
+      "name": "deployment-wave action effect and repair",
+      "fixture": "fixtures/d5_deployment_wave_planning",
+      "workspace": "fixture",
+      "task": "TASK.md",
+      "atlas": false,
+      "mutable_paths": [
+        "src/deployment-waves.mjs"
+      ],
+      "visible_check": "npm_test",
+      "external_evaluator": "artifact_grader",
+      "call_ceiling": 8,
+      "minimum_path": [
+        "read contract",
+        "read target",
+        "replace target",
+        "run visible check",
+        "observe check and optionally repair",
+        "recheck if repaired",
+        "submit"
+      ],
+      "minimum_calls": 5,
+      "repair_path_calls": 7,
+      "malformed_action_slack": 1,
+      "requires_labeled_final_response": true
+    },
+    "D6": {
+      "name": "conditional exact fresh review and resumption",
+      "call_ceiling": 5,
+      "selection": "first changed terminal candidate in D2,D3,D4,D5 order",
+      "branches": [
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "null"
+      ],
+      "null_calls": 0,
+      "capacity_ineligible_calls": 0,
+      "packet_excludes": [
+        "construction chronology",
+        "prior final response",
+        "old observation bodies other than a latest current check",
+        "external grader output",
+        "readiness disposition",
+        "gold repair",
+        "investigator-selected unread evidence"
+      ],
+      "claim_limit": "same-lineage descriptive reconstitution assay; not a chronology ablation or independent recurrence"
+    }
+  }
+}

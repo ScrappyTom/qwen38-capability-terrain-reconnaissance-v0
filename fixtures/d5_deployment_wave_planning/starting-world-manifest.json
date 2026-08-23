@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "1ac302c38aa00ed18a441460a7590739319fb0b258319b868b6383eae1d6df7c",
+  "file_count": 6,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 345,
+      "sha256": "56a7b8166f1bced4445f3050f1a1ea04f2bbc593ea13ff122ac2c8b5dd90cb3c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 162,
+      "sha256": "91d60f89f822f10c2692887e97764a57a89a80333d41421af53e9cf5bc6f2f68"
+    },
+    {
+      "path": "docs/deployment-waves.md",
+      "bytes": 2714,
+      "sha256": "34ffbb756b7099c9eef6ace4e46de5c1134ea73c2bf2d82e7e273285961ac416"
+    },
+    {
+      "path": "package.json",
+      "bytes": 173,
+      "sha256": "ac0bd632ac16c529000e10a57dea87d26b4fd1fd2d2d1b77b071fa210c010be1"
+    },
+    {
+      "path": "src/deployment-waves.mjs",
+      "bytes": 538,
+      "sha256": "36c42e533176ecbd313f4f4ecff7be81e04e0b4bb19bd9b3bb5908ed88cff285"
+    },
+    {
+      "path": "test/deployment-waves.test.mjs",
+      "bytes": 1176,
+      "sha256": "845674ded7512c907e141fc5299e656b4cb26c3f456b96bc87814741d522998e"
+    }
+  ]
+}

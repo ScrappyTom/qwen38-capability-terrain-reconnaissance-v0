@@ -1,0 +1,37 @@
+{
+  "schema_version": "paper-revision-requirement-rubric-v0",
+  "task_sha256": "825c65578f31bab527c567aeee95d1c7f9f14cd35bef977e45dc8e1f648608c9",
+  "candidate_binding_required": true,
+  "evidence": [
+    "paper.md",
+    "evidence_update.md",
+    "editorial_memo.md"
+  ],
+  "rating_values": [
+    "met",
+    "partial",
+    "not_met",
+    "ambiguous"
+  ],
+  "closure_ready_rule": "all criteria met and no blocking unsupported claim",
+  "criteria": [
+    {"id": "protected_scope", "requirement": "Only paper.md changes; title, Introduction, Methods, References, section order, and locked records are exact-preserved."},
+    {"id": "abstract_design", "requirement": "Abstract identifies the prospective matched-cohort/nonrandomized design and uses association rather than causal language with D1 binding."},
+    {"id": "abstract_primary", "requirement": "Abstract reports 71.2%, 52.8%, adjusted 18.4 percentage points, and 95% CI 6.1 to 30.7 with D2 binding."},
+    {"id": "abstract_limitations", "requirement": "Abstract names both the design/causal limitation and differential dropout limitation with D1/D3 bindings."},
+    {"id": "results_primary", "requirement": "Results reports both rates, adjusted difference, CI, p=0.006, and D2 binding."},
+    {"id": "results_missingness", "requirement": "Results reports 8.7% versus 3.1%, complete-case/no-imputation context, possible upward bias, and D3 binding."},
+    {"id": "results_subgroup", "requirement": "Results calls ward subgroup exploratory and not preregistered, avoids confirmatory heterogeneity, and binds D3."},
+    {"id": "discussion_claim_strength", "requirement": "Discussion uses association language, explains the design cannot establish causation, avoids deployment recommendation, and binds D1/D2."},
+    {"id": "discussion_missingness", "requirement": "Discussion explains complete-case differential dropout may bias the association upward and binds D3."},
+    {"id": "discussion_subgroup", "requirement": "Discussion treats the subgroup as exploratory/nonconfirmatory and not evidence of heterogeneity, with D3 binding."},
+    {"id": "citation_binding", "requirement": "Design, primary-result, and quality/subgroup claims are locally bound to D1, D2, and D3 respectively; no undefined source is added."},
+    {"id": "cross_section_consistency", "requirement": "Abstract, Results, and Discussion agree on design, figures, missingness, subgroup status, and claim strength."},
+    {"id": "unsupported_claims", "requirement": "No unsupported statistic, source, causation statement, directional subgroup claim, dismissal of missingness, or deployment recommendation appears."}
+  ],
+  "machine_evidence": {
+    "visible_cases": 6,
+    "hidden_cases": 16,
+    "warning": "The hidden grader is retained as evidence but is not the sole readiness oracle because some cases duplicate or impose section-local lexical requirements beyond the task." 
+  }
+}

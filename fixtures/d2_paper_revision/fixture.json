@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "fixture_id": "paper-revision-v1",
+  "fixture_version": 1,
+  "task_file": "task.md",
+  "candidate_dir": "candidate",
+  "visible_checks": {
+    "visible": {
+      "script": "control/visible_check.py",
+      "timeout_seconds": 10
+    }
+  },
+  "grader": {
+    "script": "control/hidden_grade.py",
+    "timeout_seconds": 10
+  },
+  "limits": {
+    "max_model_turns": 24,
+    "max_read_bytes": 65536,
+    "max_patch_bytes": 65536
+  }
+}

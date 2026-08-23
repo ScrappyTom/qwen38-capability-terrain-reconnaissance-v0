@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "device-event-folding",
+  "manifest_sha256": "4fca1e601ae73330a9cd92f07e958702fe8adf59e625360cc07289561ee7fac2",
+  "files": [
+    { "path": "AGENTS.md", "bytes": 324, "sha256": "b2755eb294040f42aeb10134f6eb98a1d9f281bd2d91ddc141e55e3b6b65e248" },
+    { "path": "README.md", "bytes": 151, "sha256": "31026abd8c4bf212ffa8f6d5f81b5713e16d20d8f717a8c8a52aa52e1aa5e357" },
+    { "path": "docs/device-events.md", "bytes": 1318, "sha256": "a9a662797e32933469c56414a600db9504946811dbee773cbc5966fa59c89eee" },
+    { "path": "package.json", "bytes": 162, "sha256": "d1ec2cb1b13f7d80ea9d784279850ebf942b594dd4cf3b44244c6b35be373906" },
+    { "path": "src/fold-device-events.mjs", "bytes": 601, "sha256": "a7e9335f4ca41f93e04d346d97b0e12bd45eec099aaa1814b0f6e1a233227b41" },
+    { "path": "src/materialize-devices.mjs", "bytes": 149, "sha256": "24dc1f843675dfffaa227bb88886d4ffe49246c1d5db15feaf7d46dbfd001f1a" },
+    { "path": "test/fold-device-events.test.mjs", "bytes": 1713, "sha256": "3766a7bef941a89cc81f9fbdd22e6b9ed39bd33c41c1b7e99ae3f9cab699c18b" }
+  ]
+}

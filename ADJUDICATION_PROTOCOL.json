@@ -1,0 +1,30 @@
+{
+  "schema_version": "capability-terrain-adjudication-protocol-v0",
+  "applies_to": {
+    "D2": {
+      "evaluator_id": "paper-revision-requirement-review-v0",
+      "rubric": "qualification/D2_REQUIREMENT_RUBRIC.json",
+      "inputs": [
+        "exact candidate manifest and paper.md bytes",
+        "exact task.md bytes",
+        "exact evidence_update.md bytes",
+        "exact editorial_memo.md bytes",
+        "visible-check projection",
+        "hidden-grade raw result"
+      ],
+      "required_record": {
+        "candidate_id": "lowercase SHA-256 manifest binding",
+        "task_sha256": "rubric-bound exact task identity",
+        "evaluator_id": "paper-revision-requirement-review-v0",
+        "criterion_dispositions": "one of met, partial, not_met, ambiguous for every frozen criterion",
+        "blocking_unsupported_claims": "explicit list",
+        "closure_readiness": "ready, not_ready, or not_adjudicated",
+        "rationale": "candidate-bound evidence for every non-met or ambiguous disposition"
+      },
+      "closure_rule": "ready only when all thirteen criteria are met and blocking_unsupported_claims is empty",
+      "runtime_default": "not_adjudicated",
+      "independence": "The adjudication is produced after the measured actor trajectory and may not be shown to the actor or used to alter the run."
+    }
+  },
+  "claim_rule": "The D2 hidden machine grade is evidence, not closure readiness. No D2 readiness or utility claim is valid until a candidate-bound record satisfying this protocol exists."
+}

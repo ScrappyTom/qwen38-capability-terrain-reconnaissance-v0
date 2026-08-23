@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task_id": "coverage-coalescing",
+  "manifest_sha256": "ca9706114cd088369fb1039fc7d673a531b58581cb560f51b84749f3172cc1ee",
+  "files": [
+    { "path": "AGENTS.md", "bytes": 326, "sha256": "f202356bdd918396d697964869323206522ee5a4c93e8f06dab35f85d73d7283" },
+    { "path": "README.md", "bytes": 138, "sha256": "4de01cbca52a58f06d1a9d26df2ffc2588039ead4fc0b3be303cd2ab74cc02ec" },
+    { "path": "docs/coverage-windows.md", "bytes": 907, "sha256": "58f855dc0591dca73f75064fdb54d6cffa51f3898e5f22659d1c144174e0471d" },
+    { "path": "package.json", "bytes": 145, "sha256": "25d79c545d9e85fdf53f2a2e2c9d86ddf0ce58d7d47d934ebab20abfa88e9511" },
+    { "path": "src/coalesce-coverage.mjs", "bytes": 144, "sha256": "cb0c188cc2fcdcae5b50c54e269e65195bf06a7fd0b894036d102f984d59c79c" },
+    { "path": "src/report-coverage.mjs", "bytes": 217, "sha256": "17bb38aad03220a7efdee3bc3ad125aaeee866c02c6f0b6ce6357f66d82567fd" },
+    { "path": "test/coalesce-coverage.test.mjs", "bytes": 964, "sha256": "528711d53fa7d5b374769670f610b5eb91cc1bcdd2369d41c17acc3f75c235a2" }
+  ]
+}

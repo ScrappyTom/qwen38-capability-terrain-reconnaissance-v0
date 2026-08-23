@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+# These files are exact experimental evidence. Git must preserve their bytes.
+fixtures/** -text whitespace=-trailing-space
+qualification/gold/** -text whitespace=-trailing-space
+qualification/D2_REQUIREMENT_RUBRIC.json whitespace=-trailing-space

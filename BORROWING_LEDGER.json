@@ -1,0 +1,9 @@
+{
+  "schema_version": "capability-terrain-borrowing-ledger-v0",
+  "policy": "Local code is adapted into this repository; runtime never imports mutable sibling checkouts.",
+  "sources": [
+    {"repository": "qwen38-pressure-qualified-lifecycle-scout-v1", "commit": "e4dcd58fa554e7e36b99e6cb454803cd099d2044", "paths": ["reactive_runtime/canonical.py", "reactive_runtime/actions.py", "reactive_runtime/records.py", "reactive_runtime/policy.py", "reactive_runtime/tokenizer.py"], "use": "canonicalization, strict parsing patterns, exact result custody, prospective counting"},
+    {"repository": "qwen38-fresh-task-whole-method-scout-v0", "commit": "a3f718554937e7e008e3a3f7c06f0ce1e500bb74", "paths": ["scout_runtime/budget.py", "scout_runtime/seal.py", "tools/run_measured_schedule.py"], "use": "budget, seal, server-gate and release patterns"},
+    {"repository": "large-world-source-navigation-2026-08-18", "commit": "0fa40039a911198fd1ad8e3ccf405cefc11ca0d4", "paths": ["workbench/world.py", "workbench/tools.py", "experiments/large-world-source-navigation-v0/atlas_provider.py"], "use": "candidate hash bindings, exact patch semantics, atlas root/expand/search/read behavior"}
+  ]
+}
